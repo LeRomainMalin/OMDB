@@ -7,8 +7,46 @@
 		<link rel="stylesheet" href="{{ asset ('assets/css/bootstrap.css')}}">
 		{% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body style="background: red">
+    <div class="row" style="background: lawngreen">
+        <div class="col-sm-6">
+            <div class="card" style="background: yellow">
+                <div class="card-body">
+                    <h5 class="card-title">Film de Roumain</h5>
+                    <p class="card-text">Super film de Roumain</p>
+                    <a type="button" class="btn btn-lg btn-primary" disabled href="{{ url('film', {"query" : "alien"} ) }}">Movies</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card" style="background: yellow">
+                <div class="card-body">
+                    <h5 class="card-title">Encore les films de Roumaine</h5>
+                    <p class="card-text">Encore des super films de Roumaine</p>
+                    <a type="button" class="btn btn-lg btn-primary" disabled href="{{ url('film',{"query" : "vérité"}) }}">Movies</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+    <form class="col-4" style="background: orangered; padding: 15px;">
+        <div class="form-group">
+            <label for="movies">Veuillez entre le nom du film</label>
+            <input type="text" class="form-control" id="movies"  placeholder="Entre le nom de ton super film">
+        </div>
+        <button type="submit" class="btn btn-primary">Envoi BB</button>
+    </form>
+    </div>
+    </div>
+    <br>
+    <br>
+        {% block body %}
+
+
+        {% endblock %}
         {% block javascripts %} 
 		<script src=""{{ asset ('assets/js/bootstrap.js') }}
 		{% endblock %}

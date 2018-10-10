@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+%
+                <div class="col-12" style="background: deeppink; padding: 10px;" >
+                    <div class="col-4" style="display: inline-block">
+                    <img src="{{ movie.Poster }}">
+                    </div>
+                    <div class="col-7" style="display: inline-block">
+                        <h5 class="card-title"><b>{{ movie.Title}}</b></h5>
+                        <p class="card-text">{{ movie.Plot }}</p>
+                        <p class="card-text">{{ movie.Year }}</p>
+                        <p class="card-text">{{ movie.Runtime }}</p>
+                        {% for rating in movie.Ratings %}
+                       
+                        {% endfor %}
+                    </div>
+                </div>
+
+        </div>
+    </div>
+{% endblock %}
