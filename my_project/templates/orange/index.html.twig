@@ -1,8 +1,53 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+
 
 {% block body %}
+
+    <h1 style="position: relative; left: 38%">Super cours de PHP</h1>
+    <h2 style="position: relative; left: 43%">Avec des amis</h2>
+    <br>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="{{ asset("assets/img/sony.jpg") }}" >
+                <div class="card-body">
+                    <p class="card-text">Sony</p>
+                    <a href="{{ url('film', {"query" : "sony"} ) }}" class="btn btn-primary">Voir film de Sony</a>
+                </div>
+        </div>
+        </div>
+            <div class="col-3">
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset("assets/img/romain.jpg") }}">
+                    <div class="card-body">
+                        <p class="card-text">Romain</p>
+                        <a href="{{ url('film', {"query" : "Romain"} ) }}" class="btn btn-primary">Voir film de Romain</a>
+                    </div>
+                </div>
+    </div>
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="{{ asset("assets/img/pierre.jpg") }}">
+                <div class="card-body">
+                    <p class="card-text">Pierre</p>
+                    <a href="{{ url('film', {"query" : "Pierre"} ) }}" class="btn btn-primary">Voir film de Pierre</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="{{ asset("assets/img/Nathou.jpg") }}">
+                <div class="card-body">
+                    <p class="card-text">Nathou</p>
+                    <a href="{{ url('film', {"query" : "Nathan"} ) }}" class="btn btn-primary">Voir film de Nathou</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 {% endblock %}

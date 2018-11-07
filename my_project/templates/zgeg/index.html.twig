@@ -6,11 +6,11 @@
 	<div class="row">
     {% for movie in movies %}
 		<div class="card col-3" >
-			<img src="{{ movie.Poster }}">
+			<img src="{{ movie.Poster != "N/A" ? movie.Poster : asset('assets/img/image.png')  }}">
 			<div class="card-body">
 				<h5 class="card-title"><b>{{ movie.Title}}</b></h5>
 				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="{{ url('fiche',{"produit" : movie.imdbID}) }}">En savoir plus</a>
+				<button type="button" class="btn btn-dark"><a style="color: white; text-decoration: none;" href="{{ url('fiche',{"produit" : movie.imdbID}) }}">En savoir plus</a></button>
 			</div>
 		</div>
     {% endfor %}

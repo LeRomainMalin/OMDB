@@ -5,19 +5,29 @@
 {% block body %}
     <div class="container">
         <div class="row">
-%
-                <div class="col-12" style="background: deeppink; padding: 10px;" >
+
+                        <div class="col-4">
+                        <img class="card-img-top" src={{ movie.Poster }}>
+                        </div>
+                        <div class="card-body col-6">
+                            <h5 class="card-title"><b>{{ movie.Title}}</b></h5>
+                            <p class="card-text">{{ movie.Plot }}</p>
+                            <div class="col-12">
+                            <p class="card-text col-3" style="display: inline-block"><small class="text-muted">{{ movie.Year }}</small></p>
+                            <p class="card-text  col-3" style="display: inline-block"><small class="text-muted">{{ movie.Runtime }}</small></p>
+                            <p class="card-text col-3 " style="display: inline-block"><small class="text-muted">{{ movie.imdbRating}}</small></p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-4" style="display: inline-block">
-                    <img src="{{ movie.Poster }}">
+                    <img src="">
                     </div>
                     <div class="col-7" style="display: inline-block">
-                        <h5 class="card-title"><b>{{ movie.Title}}</b></h5>
-                        <p class="card-text">{{ movie.Plot }}</p>
-                        <p class="card-text">{{ movie.Year }}</p>
-                        <p class="card-text">{{ movie.Runtime }}</p>
-                        {% for rating in movie.Ratings %}
-                       
-                        {% endfor %}
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <p class="card-text"></p>
+                        <p class="card-text"></p>
+                        <p class="card-text"></p>
                     </div>
                 </div>
 
